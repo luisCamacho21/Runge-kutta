@@ -14,7 +14,10 @@ int main(void) {
     float e[15];
 
     float varX =0, varY =1, varKi1, varXiPlusH, varYiPlusHK, varKi2, varYiPlus1, varE;
-    float h = 0.35;
+    float h;
+
+    printf("What do you want H to be?\n");
+    scanf("%f", &h);
 
     for (int i = 0; i < 15; i++) {
 
@@ -40,9 +43,14 @@ int main(void) {
 
 
         }
-    printf ("--Xi-- \t --Yi-- \t --Ki1-- \t --Xi+h-- \t --Yi+hk-- \t --Ki2-- \t --Yi+1-- \t --e-- \n");
+
+        printf(" we have the differential equation: dy/dx = 3.4(x^2 + 2.5) / y^2 - 4.8. And we approximate it using Runge Kutta\n\n\n");
+
+    printf ("--Xi-- \t| --Yi-- \t| --Ki1-- \t| --Xi+h-- \t| --Yi+hk-- \t| --Ki2-- \t| --Yi+1-- \t| --e-- \n");
     for (int j =0; j < 15; j++) {
-        printf ("%.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.4f \t %.3f%%\n", x[j], y[j], Ki1[j], XiPlusH[j], YiPlusHK[j], Ki2[j], YiPlus1[j], e[j]);
+        printf ("%.3f \t| %.3f \t| %.3f \t| %.3f \t| %.3f \t| %.3f \t| %.3f \t| %.3f%%\n", x[j], y[j], Ki1[j], XiPlusH[j], YiPlusHK[j], Ki2[j], YiPlus1[j], e[j]);
+        printf ("____________________________________________________________________________________________________________________\n");
 
     }
 }
+
